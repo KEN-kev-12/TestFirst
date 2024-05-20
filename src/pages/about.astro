@@ -1,0 +1,109 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Kevin Tsobgni" description="About kevin tsobgni">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Découvrez mon parcours et mes compétences"
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/portrait.jpeg"
+					alt="portrait de moi"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>Bienvenue sur mon site ! Je suis Kevin Tsobgni, un <strong>développeur de logiciels </strong> passionné par la création d'applications innovantes et performantes. Avec une formation solide acquise à l'<strong>ENSIMAG</strong> et une expérience pratique dans le développement de logiciels produit au cours de ma formation, je suis à la recherche de nouvelles opportunités professionnelles passionnantes.</p>
+
+					<p>Je me spécialise dans plusieurs langages de programmation, et je suis à l'aise avec divers frameworks et technologies. Mon objectif est de créer des solutions logicielles efficaces qui répondent aux besoins de mes clients tout en offrant une expérience utilisateur exceptionnelle.</p>
+
+					<p>Au fil des années de formation, j'ai travaillé sur une variété de projets, allant des applications web aux applications mobiles, en passant par les systèmes de gestion de bases de données. Mon approche méthodique et ma passion pour l'innovation me permettent de relever les défis techniques avec succès et d'atteindre les objectifs fixés.</p>
+
+					<p>Je suis convaincu que ma combinaison de compétences techniques, de créativité et de détermination fait de moi un candidat idéal pour rejoindre votre équipe. Si vous recherchez un développeur motivé et compétent pour contribuer à votre projet, n'hésitez pas à me contacter.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Diplômes</h2>
+				<div class="content">
+					<p>BAC+5, Igénierie des systèmes d'information et master en conception informatique à l'ENSIMAG</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p>Curieux, Créatif, Autonome, Adaptatif, Polyvalent, Travail d'équipe</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
