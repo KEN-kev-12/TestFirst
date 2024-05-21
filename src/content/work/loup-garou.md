@@ -36,6 +36,8 @@ tags:
 
 <strong>Base de Données :</strong> Implémentation de sqlite pour la gestion des utilisateurs, des parties et des messages en temps réel.
 
+<strong>Outils de Conception : </strong>StartUML pour la confection des diagrammes UML et figma pour le design de l'application.
+
 <strong>Outils de Collaboration :</strong> Utilisation de Gitlab pour le contrôle de version et de Jira et gitlab pour la gestion de projet.
 
 ### Défis et Solutions :
